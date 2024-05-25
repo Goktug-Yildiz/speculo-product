@@ -1,0 +1,289 @@
+<!-- product.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Copy the entire <head> section from index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specula Product</title>
+    <link rel="icon" href='https://imgur.com/a/3UOpW8P' type="image/icon type">
+    <style>
+            /* Added CSS styles */
+            body {
+                background-color: rgb(0, 0, 128); /* A dark blue-purple background */
+                color: white; /* White text color */
+                font-family: Arial, sans-serif; /* Arial font with sans-serif fallback */
+                text-align: center; /* Center-aligned text */
+                line-height: 1.6; /* Improved line height */
+                margin: 0; /* Removed default margin */
+                padding: 0; /* Removed default padding */
+            }
+            h1 {
+                display: block; /* Display as a block element */
+                margin: 20px auto; /* Add some margin to the top and bottom */
+                font-size: 36px; /* Increase font size for the heading */
+                font-weight: bold; /* Make the heading bold */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+                padding: 0 20px; /* Added padding for better readability */
+            }
+            /* Add a gradient effect to the background */
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(91, 78, 122, 0.5), rgba(91, 78, 122, 1));
+                z-index: -1;
+            }
+            /* Added a container for the content */
+        .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            /* Added styles for the paragraphs */
+            p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            /* Added styles for the navigation bar */
+        .navbar {
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+            }
+        .navbar a {
+                display: block;
+                padding: 10px 20px;
+                margin: 0 10px;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                text-decoration: none;
+                color: white;
+                transition: background-color 0.3s ease;
+            }
+        .navbar a:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            /* Added styles for the contact section */
+            #contact {
+                margin-top: 50px;
+                text-align: left;
+                padding: 20px;
+                background-color: rgb(0, 0, 128);
+                border-radius: 5px;
+            }
+            #contact h2 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            #contact label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            #contact input,
+            #contact textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: none;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+            }
+            #contact button {
+                background-color: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            #contact button:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            #contact-box {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: left;
+}
+
+#contact-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contact-box label {
+    display: inline-block;
+    width: 20%;
+    margin-right: 10px;
+    text-align: right;
+    vertical-align: top;
+}
+
+#contact-box input,
+#contact-box textarea {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    vertical-align: top;
+}
+
+#contact-box button {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#contact-box button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#contact-box {
+    margin-top: 50vh;
+}
+html {
+    scroll-behavior:smooth;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(41, 41, 138); /* A dark blue-purple background */
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+#language-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#language-selector label {
+    margin-right: 10px;
+}
+
+#language-selector select {
+    padding: 5px;
+    border-radius: 5px;
+}
+#message {
+    height: 200px;
+}
+#cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-top-right-radius: 5px;
+}
+
+#cookie-popup button {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#cookie-popup button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#decline-button {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#decline-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#cookie-popup {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+#cookie-popup.fade-away {
+    opacity: 0;
+}
+#cookie-popup button {
+    display: inline-block;
+    margin-right: 10px;
+}
+nav {
+    position: relative;
+}
+
+nav h1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+#information {
+    position: relative;
+}
+
+#information p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 75px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Add product sale content here -->
+        <h1>Specula Product</h1>
+        <p>Our product is a smart clothing system that allows visually impaired individuals to engage in art without needing anyone else.</p>
+        <img src="product-image.jpg" alt="Product Image">
+        <button>Buy Now</button>
+    </div>
+</body>
+</html>
